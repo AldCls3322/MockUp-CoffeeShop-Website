@@ -44,7 +44,7 @@ export default MainInfo
 const Container = style.div`
     background: #0D0A08; /* BROWN OPTION = #3C2A20 */
     color: white;
-    width: 100%;
+    width: vw;
     height: 600px;
     border-top: 1px solid #F2E3D0;
     padding: 10px;

@@ -7,7 +7,7 @@ const Title = () => {
     return (
         <Container>
             <TitleName>
-                <BlurOnIcon/>
+                <BlurOnIcon style={{fontSize: 150}}/>
                 <CoffeeName>ELEVATION CAFE</CoffeeName>
                 <Message>For the simple pleasures in life</Message>
             </TitleName>
@@ -26,19 +26,20 @@ const Container = style.div`
     height: 610px;
     align-items: center;
     justify-content: center;
-    display: absolute;
+    position: relative;
 `
 
 const TitleName = style.div`
-    padding-top: 120px;
-    transform: scale(2);
+    padding-top: 10%;
+    // transform: scale(2); // makes all twice as big however the content does fix to its size
 `
 
 const CoffeeName = style.div`
+    font-size: 2rem;
     font-weight: bolder;
 `
 
 const Message = style.div`
-    transform: scale(0.5);
+    // transform: scale(0.5);
     font-style: italic;
 `
