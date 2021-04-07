@@ -3,12 +3,16 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import style from 'styled-components';
 
 import Header from './components/Header';
-import Title from './components/Title';
-import MainInfo from './components/MainInfo';
-import OptionMenu from './components/OptionMenu';
-import Review from './components/Review';
-import Events from './components/Events';
 import Footer from './components/Footer';
+
+import HomeTitle from './components/Title';
+import HomeMainInfo from './components/MainInfo';
+import HomeOptionMenu from './components/OptionMenu';
+import HomeReview from './components/Review';
+import HomeEvents from './components/Events';
+
+import ContactTitle from './components/ContactTitle';
+import ContactInfo from './components/ContactInfo';
 
 function App() {
   return (
@@ -17,20 +21,14 @@ function App() {
         <Container>
           
           <Header/>
-          <Title/>
-          <MainInfo/>
-          <OptionMenu/>
-          <Review/>
-          <Events/>
-          <Footer/>
-          
 
           <Switch>
             <Route path="/menu">
               MENU
             </Route>
             <Route path="/contact">
-              CONTACTS
+              <ContactTitle/>
+              <ContactInfo/>
             </Route>
             <Route path="/benefits-of-coffee">
               BENEFITS OF COFFEE
@@ -38,10 +36,17 @@ function App() {
             <Route path="/our-products">
               BUY OUR COFFEE
             </Route>
-            <Route path="/">
-              Home Page
+            <Route path="/"> {/* If you place this before the other paths it will ignore them, you may use it at the beginning if: <Route path="/" exact></Route>*/}
+              <HomeTitle/>
+              <HomeMainInfo/>
+              <HomeOptionMenu/>
+              <HomeReview/>
+              <HomeEvents/>
             </Route>
           </Switch>
+
+          <Footer/>
+
         </Container>
       </Router>
     </div>

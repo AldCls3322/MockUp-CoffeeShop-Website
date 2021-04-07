@@ -7,7 +7,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 function Footer() {
     return (
         <Container>
-            <CopyRighted>@2021-2021 Elevation Cafe - All rights reserved!</CopyRighted>
+            <CopyRighted>@2021 Elevation Cafe - All rights reserved!</CopyRighted>
             <SocialMedias>
                 <FacebookIcon/>
                 <TwitterIcon/>

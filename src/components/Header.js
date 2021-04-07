@@ -1,5 +1,6 @@
 import React from 'react'
 import style from 'styled-components';
+import { Link } from 'react-router-dom';
 import LocalCafeOutlinedIcon from '@material-ui/icons/LocalCafeOutlined';
 import BlurOnIcon from '@material-ui/icons/BlurOn';
 
@@ -11,18 +12,24 @@ function Header() {
                 ELEVATION CAFE
             </CoffeeName>
             <Options>
-                <HomeButton>
-                    <LocalCafeOutlinedIcon/>
-                    Home
-                </HomeButton>
-                <MenuButton>
-                    <LocalCafeOutlinedIcon/>
-                    Menu
-                </MenuButton>
-                <ContactButton>
-                    <LocalCafeOutlinedIcon/>
-                    Contact Us
-                </ContactButton>
+                <StyledLink to="/" exact>
+                    <HomeButton>
+                        <LocalCafeOutlinedIcon/>
+                        Home
+                    </HomeButton>
+                </StyledLink>
+                <StyledLink to="/menu" >
+                    <MenuButton>
+                        <LocalCafeOutlinedIcon/>
+                        Menu
+                    </MenuButton>
+                </StyledLink>
+                <StyledLink to="/contact">
+                    <ContactButton>
+                        <LocalCafeOutlinedIcon/>
+                        Contact Us
+                    </ContactButton>
+                </StyledLink>
             </Options>
         </Container>
     )
@@ -60,10 +67,17 @@ const Options = style.div`
     right: -10px;
 `
 
-const HomeButton = style.div`
-    margin-left: 5px;
-    margin-right: 5px;
-    display: flex;
+const StyledLink = style(Link)`
+    text-decoration: none;
+    color: white;
+
+    &:visited, &:link {
+        text-decoration: none;
+    }
+
+    :active, :focus {
+        color: #89634B; /* liver chestnut = #9E7A4D ;  */
+    }
 
     :hover {
         color: #C9A469; /* liver chestnut = #9E7A4D ;  */
@@ -74,6 +88,12 @@ const HomeButton = style.div`
         // background-color: #C9A469;
         transition: .25s linear;
     }
+`
+
+const HomeButton = style.div`
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
 `
 
 const MenuButton = style.div`
