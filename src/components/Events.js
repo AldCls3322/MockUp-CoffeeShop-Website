@@ -8,8 +8,8 @@ function Events() {
     return (
         <Container>
             <Contents>
-                <Card1>
-                    <Card01Img></Card01Img>
+                <Card>
+                    <Card01Img/>
                     <CardText>
                         <CardTextTitle>Open Mic Night</CardTextTitle>
                         <CardTextContent> 
@@ -18,17 +18,17 @@ function Events() {
                         </CardTextContent>
                         <StatelessButton>COMING SOON!</StatelessButton>
                     </CardText>
-                </Card1>
-                <Card2>
-                    <Card02Img></Card02Img>
+                </Card>
+                <Card>
+                    <Card02Img/>
                     <CardText>
                         <CardTextTitle>SK High Touch Reading</CardTextTitle>
-                        <CardTextContent>Our name came from a book of one of the best storytellers in our modern days. Stephen King. </CardTextContent>
-                        <StatelessButton>LEARN MORE!</StatelessButton>
+                        <CardTextContent>Our name came from a book of one of the best storytellers in our modern days. <span>Stephen King. </span>He has written over 60 novels and we wish to create a reading club to promote literature, not only his but from many authors whose can <span>change your life just like our coffee. </span></CardTextContent>
+                        <StatelessButton>COMING SOON!</StatelessButton>
                     </CardText>
-                </Card2>
-                <Card3>
-                    <Card03Img></Card03Img>
+                </Card>
+                <Card>
+                    <Card03Img/>
                     <CardText>
                         <CardTextTitle>Elevation Cafe Gift Shop</CardTextTitle>
                         <CardTextContent>
@@ -37,7 +37,7 @@ function Events() {
                         </CardTextContent>
                         <StatelessButton>COMING SOON!</StatelessButton>
                     </CardText>
-                </Card3>
+                </Card>
             </Contents>
         </Container>
     )
@@ -48,8 +48,8 @@ export default Events
 const Container = style.div`
     background: #0D0A08; /* BROWN OPTION = #3C2A20 */
     color: white;
-    width: vw;
-    height: 400px;
+    width: auto;
+    height: max-content;
     position: relative;
 
     padding: 10px;
@@ -59,50 +59,38 @@ const Container = style.div`
 const Contents = style.div`
     // padding: 10px;
     justify-content: center;
-    height: 100%;
+    height: max-content;
     display: flex;
     position: relative;
 `
 
-const Card1 = style.div`
+const Card = style.div`
     margin: 10px;
     width: 30%;
-    height: auto;
+    height: max-content;
 `
 
 const Card01Img = style.div`
     width: 100%;
-    height: 45%;
+    height: 200px;
     background: url(${Karaoke}) center center;
     background-size: cover;
     border: 3px solid white;
     border-radius: 6px;
 `
 
-const Card2 = style.div`
-    margin: 10px;
-    width: 30%;
-    height: auto;
-`
-
 const Card02Img = style.div`
     width: 100%;
-    height: 45%;
+    height: 200px;
     background: url(${Reading}) center center;
     background-size: cover;
     border: 3px solid white;
     border-radius: 6px;
 `
 
-const Card3 = style.div`
-    margin: 10px;
-    width: 30%;
-    height: auto;
-`
-
 const Card03Img = style.div`
     width: 100%;
-    height: 45%;
+    height: 200px;
     background: url(${A}) center, center;
     background-size: cover;
     border: 3px solid white;
@@ -111,6 +99,7 @@ const Card03Img = style.div`
 
 const CardText = style.div`
     margin: 5px;
+    height: max-content;
 `
 
 const CardTextTitle = style.div`
@@ -124,6 +113,7 @@ const CardTextContent = style.div`
     margin-top: 20px;
     font-size: 0.8rem;
     text-align: left;
+    padding-bottom: 60px;
 
     span {
         color: rgba(255,255,255,0.9);
@@ -136,7 +126,7 @@ const StatelessButton = style.div`
     border-radius: 15px;
     font-weight: bold;
     height: 50px;
-    width: 200px;
+    width: 200px; 
     position: absolute;
     bottom: 0;
 

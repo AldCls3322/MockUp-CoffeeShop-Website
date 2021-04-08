@@ -18,7 +18,7 @@ function Header() {
                         Home
                     </HomeButton>
                 </StyledLink>
-                <StyledLink to="/menu" >
+                <StyledLink to="/menu">
                     <MenuButton>
                         <LocalCafeOutlinedIcon/>
                         Menu

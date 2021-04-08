@@ -1,5 +1,6 @@
 import React from 'react'
 import style from 'styled-components';
+import { Link } from 'react-router-dom';
 import HoursImg from '../imgs/openingHours1.jpg';
 import LocalBarIcon from '@material-ui/icons/LocalBar';
 import CoffeeBg2 from '../imgs/coffeeBackground2.jpg';
@@ -16,24 +17,24 @@ function MainInfo() {
                 <Bar></Bar>
             </TitleMainInfo>
             <Contents>
-                <Card1>
+                <Card>
                     <Card01Img></Card01Img>
                     <CardText>
                         <CardTextTitle>REST, RELAX, REVIVIE</CardTextTitle>
                         <CardTextContent>At Elevation Cafe you can rest, relax, and revive with good coffee, good company, and excquisite food!</CardTextContent>
                         <FreeWifi><WifiIcon style={{ fontSize: 60}}/></FreeWifi>
                     </CardText>
-                </Card1>
-                <Card2>
+                </Card>
+                <Card>
                     <Card02Img></Card02Img>
                     <CardText>
                         <CardTextTitle>DID SOMEONE SAY "COFFEE"!</CardTextTitle>
                         <CardTextContent>We offer some of the best locally roasted coffee using "Columbian" beans. Enjoy Dark, Blonde, Jamaican, Italian, and Decaf roasts. Also available are our speciality Lattes, Frappes, Mochas, Cappuccinos, Americanos, and more...
-                            <div>To see more of our coffee, speciality drinks an food menus, please click the link 'Menu'.</div>
+                            <div>To see more of our coffee, speciality drinks an food menus, please click <StyledLink to="/menu">here</StyledLink>.</div>
                         </CardTextContent>
                     </CardText>
-                </Card2>
-                <Card3></Card3>
+                </Card>
+                <Card3/>
             </Contents>
         </Container>
     )
@@ -76,7 +77,7 @@ const Contents = style.div`
     display: flex;
 `
 
-const Card1 = style.div`
+const Card = style.div`
     margin: 10px;
     width: 30%;
     height: auto;
@@ -103,17 +104,20 @@ const FreeWifi = style.div`
     right: 10%;
 `
 
-const Card2 = style.div`
-    margin: 10px;
-    width: 30%;
-    height: auto;
-`
-
 const Card02Img = style.div`
     width: 100%;
     height: 45%;
     background: url(${CoffeeRlx}) center center;
     background-size: cover;
+`
+
+const StyledLink = style(Link)`
+    text-decoration: underline;
+    color: rgba(255,255,255);
+
+    &:visited, &:link, &:active, &:focus {
+        text-decoration: underline;
+    }
 `
 
 const Card3 = style.div`
