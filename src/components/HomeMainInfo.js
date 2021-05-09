@@ -43,50 +43,55 @@ function MainInfo() {
 export default MainInfo
 
 const Container = style.div`
-    background: #0D0A08; /* BROWN OPTION = #3C2A20 */
-    color: white;
     width: vw;
     height: 600px;
     border-top: 1px solid #F2E3D0;
     padding: 10px;
     padding-top: 20px;
+
+    background: #0D0A08; /* BROWN OPTION = #3C2A20 */
+    color: white;
 `
 
 const TitleMainInfo = style.div`
-    transform: scale(2);
-    height: 5%;
-    color: #9E7A4D;
-    padding: 10px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
+    height: 5%;
+    padding: 10px;
+    transform: scale(2);
+
+    color: #9E7A4D;
 `
 
 const Bar = style.div`
-    background: #9E7A4D;
     height: 1px;
     width: 20%;
     margin-left: 5px;
     margin-right: 5px;
+
+    background: #9E7A4D;
 `
 
 const Contents = style.div`
-    padding: 10px;
+    display: flex;
     justify-content: center;
     height: 90%;
-    display: flex;
+    padding: 10px;
 `
 
 const Card = style.div`
+    position: relative;
+
     margin: 10px;
     width: 30%;
     height: auto;
-    position: relative;
 `
 
 const Card01Img = style.div`
     width: 100%;
     height: 45%;
+
     background: url(${CoffeeBg2}) center center;
     background-size: cover;
     border: 3px solid white;
@@ -94,26 +99,29 @@ const Card01Img = style.div`
 `
 
 const FreeWifi = style.div`
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+
+    /* Image Option */
     // background: url(${CoffeeWifi}) center center;
     // background-size: cover;
     // background-color: white;
     // height: 50%;
     // width: 20%;
-    position: absolute;
-    bottom: 0;
-    right: 10%;
 `
 
 const Card02Img = style.div`
     width: 100%;
     height: 45%;
+
     background: url(${CoffeeRlx}) center center;
     background-size: cover;
 `
 
 const StyledLink = style(Link)`
-    text-decoration: underline;
     color: rgba(255,255,255);
+    text-decoration: underline;
 
     &:visited, &:link, &:active, &:focus {
         text-decoration: underline;
@@ -121,11 +129,12 @@ const StyledLink = style(Link)`
 `
 
 const Card3 = style.div`
-    background: url(${HoursImg}) center, center;
-    background-size: cover;
-    margin: 10px;
     width: 30%;
     height: auto;
+    margin: 10px;
+
+    background: url(${HoursImg}) center, center;
+    background-size: cover;
 `
 
 const CardText = style.div`
@@ -134,13 +143,15 @@ const CardText = style.div`
 
 const CardTextTitle = style.div`
     margin: 10px;
+
     font-size: 1.2rem;
     font-weight: bolder;
 `
 
 const CardTextContent = style.div`
-    color: rgba(255,255,255,0.6);
     margin-top: 20px;
+    
+    color: rgba(255,255,255,0.6);
     font-size: 0.8rem;
     text-align: left;
 

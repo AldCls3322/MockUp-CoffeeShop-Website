@@ -21,33 +21,37 @@ function Footer() {
 export default Footer
 
 const Container = style.div`
-    background-color: #0D0A08;
-    border-top: 1px solid #F2E3D0;
-    color: white;
-    width: 100%;
-    height: 70px;
-    
     position: relative;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid #F2E3D0;
+
+    background-color: #0D0A08;
+    color: white;
 `
 
 const CopyRighted = style.div`
-    font-size: 0.6rem;
-    padding-left: 20px;
     position: absolute;
     left: 0;
+
+    padding-left: 20px;
+
+    font-size: 0.6rem;
 `
 
 const SocialMedias = style.div`
 `
 
 const Creator = style.div`
-    font-size: 0.5rem;
-    padding: 20px;
     position: absolute;
     top: 0;
     right: 0;
+    
+    padding: 20px;
+
+    font-size: 0.5rem;
 `

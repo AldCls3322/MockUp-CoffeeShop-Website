@@ -70,14 +70,15 @@ function ContactInfo() {
 export default ContactInfo
 
 const Container = style.div`
-    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100vw;
     height: 740px;
     padding: 2%;
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    background: white;
     text-align: left;
 `
 
@@ -89,27 +90,30 @@ const Card = style.div`
     box-sizing: border-box;
 
     .subCard {
-        padding-top: 7%;
         display: flex;
+        padding-top: 7%;
     }
 `
 
 const Title = style.div`
+    padding-bottom: 2%;
+
     font-size: 1.4rem;
     font-weight: bold;
-    padding-bottom: 2%;
 `
 
 const Bar = style.div`
-    background: #9E7A4D;
     height: 4px;
     width: 30%;
+
+    background: #9E7A4D;
 `
 
 const Contents = style.div`
+    padding-top: 2%;
+
     color: rgba(0,0,0,0.6);
     font-size: 0.8rem;
-    padding-top: 2%;
 
     span {
         font-weight: bold;
@@ -117,19 +121,28 @@ const Contents = style.div`
 `
 
 const MailSender = style.div`
-    color: #C9A469;
-    padding: 2%;
     position: relative;
 
+    padding: 2%;
+
+    color: #C9A469;
+
     input, textarea {
-        background-color:  #F5F3F0; /* IVORY GRAY: #F9F6E4  #F7F7F6 #f5f3f0 #f3f2ed #F7F6F3*/
-        color: #C9A469;
-        border: 1px solid black;
-        border-radius: 6px;
-        margin-top: 5%;
-        padding: 2%;
         width: 100%;
         box-sizing: border-box;
+        margin-top: 5%;
+        padding: 2%;
+        border: 1px solid black;
+        border-radius: 6px;
+
+        background-color:  #F5F3F0; /* IVORY GRAY: #F9F6E4  #F7F7F6 #f5f3f0 #f3f2ed #F7F6F3*/
+        color: #C9A469;
+        font-weight: bold;
+
+        ::placeholder { /* works for Chrome, Safaru, Opera, Firefox*/
+            color: #C9A469;
+            opacity: 1; /* for Firefox */
+        }
     }
 
     .form-message {
@@ -137,19 +150,22 @@ const MailSender = style.div`
     }
 
     .btn-snd-email {
-        background-color: #C9A469;
-        color: white;
-        box-shadow: -1px 1px 0 1px black;
-        border: none;
-        width: 30%;
         position: absolute;
         bottom: 0;
         right: 0;
+
+        border: none;
+        width: 30%;
+
+        background-color: #C9A469;
+        color: white;
+        
+        box-shadow: -1px 1px 0 1px black;
     }
 
     .btn-snd-email:active {
         border: none;
-        translate(-1px, 1px);
+        translate(-1px, 1px); /* CHECK HOW TO SIMPLE ANIMATE IT */
     }
 `
 
@@ -159,13 +175,13 @@ const InfoSubCards = style.div`
 
 const SubTitle = style.div`
     div {
+        padding-top: 5px;
+        padding-bottom: 15px;
+
         color: rgba(0,0,0,0.8);
         font-size: 1rem;
         font-weight: bold;
-        padding-top: 5px;
-        padding-bottom: 15px;
     }
-
 `
 
 const StyledLocationOnIcon = style(LocationOnIcon)`
@@ -173,18 +189,21 @@ const StyledLocationOnIcon = style(LocationOnIcon)`
 `
 
 const StyledPhoneIcon = style(PhoneIcon)`
-    color: #C9A469;
     padding-right: 5px;
+
+    color: #C9A469;
 `
 
 const StyledMailIcon = style(MailIcon)`
-    color: #C9A469;
     padding-right: 5px;
+
+    color: #C9A469;
 `
 
 const MapContainer = style.div`
-    margin-top: 5%;
-    background-color: red;
     height: 300px;
     width: 100%;
+    margin-top: 5%;
+
+    background-color: #9E7A4D#9E7A4D;
 `

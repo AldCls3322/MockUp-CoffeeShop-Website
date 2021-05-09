@@ -20,47 +20,53 @@ function Review() {
 export default Review
 
 const Container = style.div`
+    position: relative;
+
     color: white;
     width: 100%;
     height: 200px;
-    position: relative;
 `
 
 const ReviewBackground = style.div`
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: black;
     background: url(${CoffeeBg5}) center center;
     background-size: cover;
     background-attachment: fixed;
     filter: blur(2px) grayscale(100%) brightness(30%);
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    position: absolute;
 `
 
 const ReviewTitle = style.div`
-    color: #9E7A4D;
-    font-weight: bold;
-    font-size: 1.5rem;
-    height: 30%;
     position: relative;
-    
+
     display: flex;
     align-items: flex-end; // makes the text item be at bottom of this component.
     justify-content: center;
+    height: 30%;
+
+    color: #9E7A4D;
+    font-weight: bold;
+    font-size: 1.5rem;
 `
 
 const ReviewInfo = style.div`
+    position: relative;
+    //left: 25%;
+
     height: 70%;
     // width: 50%;
-    font-style: italic;
-    font-size: 0.8rem;
     padding: 1%;
     padding-left: 25%;
     padding-right: 25%;
     margin: 0;
     box-sizing: border-box; // respects the width and height of the parent component.
-    position: relative;
-    //left: 25%;
+
+    font-style: italic;
+    font-size: 0.8rem;
     
     p.review {
         color: rgba(255,255,255,0.8);
@@ -68,6 +74,7 @@ const ReviewInfo = style.div`
 
     p.user {
         padding-top: 5px;
+        
         font-size: 0.9rem;
         font-style: normal;
         font-weight: 500;

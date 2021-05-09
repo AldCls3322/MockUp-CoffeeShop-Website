@@ -46,22 +46,24 @@ function Events() {
 export default Events
 
 const Container = style.div`
-    background: #0D0A08; /* BROWN OPTION = #3C2A20 */
-    color: white;
+    position: relative;
+    
     width: auto;
     height: max-content;
-    position: relative;
-
     padding: 10px;
     padding-top: 20px;
+
+    background: #0D0A08; /* BROWN OPTION = #3C2A20 */
+    color: white;
 `
 
 const Contents = style.div`
-    // padding: 10px;
+    position: relative;
+    
+    display: flex;
     justify-content: center;
     height: max-content;
-    display: flex;
-    position: relative;
+    // padding: 10px;
 `
 
 const Card = style.div`
@@ -73,6 +75,7 @@ const Card = style.div`
 const Card01Img = style.div`
     width: 100%;
     height: 200px;
+
     background: url(${Karaoke}) center center;
     background-size: cover;
     border: 3px solid white;
@@ -82,6 +85,7 @@ const Card01Img = style.div`
 const Card02Img = style.div`
     width: 100%;
     height: 200px;
+
     background: url(${Reading}) center center;
     background-size: cover;
     border: 3px solid white;
@@ -91,6 +95,7 @@ const Card02Img = style.div`
 const Card03Img = style.div`
     width: 100%;
     height: 200px;
+
     background: url(${A}) center, center;
     background-size: cover;
     border: 3px solid white;
@@ -104,16 +109,18 @@ const CardText = style.div`
 
 const CardTextTitle = style.div`
     margin: 10px;
+
     font-size: 1.2rem;
     font-weight: bolder;
 `
 
 const CardTextContent = style.div`
-    color: rgba(255,255,255,0.6);
     margin-top: 20px;
-    font-size: 0.8rem;
     text-align: left;
     padding-bottom: 60px;
+
+    color: rgba(255,255,255,0.6);
+    font-size: 0.8rem;
 
     span {
         color: rgba(255,255,255,0.9);
@@ -122,21 +129,23 @@ const CardTextContent = style.div`
 `
 
 const StatelessButton = style.div`
-    background-color: #9E7A4D;
-    border-radius: 15px;
-    font-weight: bold;
-    height: 50px;
-    width: 200px; 
     position: absolute;
     bottom: 0;
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 50px;
+    width: 200px;
+
+    background-color: #9E7A4D;
+    border-radius: 15px;
+    font-weight: bold;
 
     :hover {
         background-color: #3C2A20; /* liver chestnut = #9E7A4D ;  */
         color: rgba(255,255,255,0.8);
+        
         cursor: pointer;
         transition: .25s linear;
     }

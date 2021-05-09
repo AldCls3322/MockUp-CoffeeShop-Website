@@ -38,36 +38,48 @@ function Header() {
 export default Header
 
 const Container = style.div`
-    background: #221E16; /* BROWN OPTION = #3C2A20 SMOKE BLACK = #0D0A08 */
-    color: white;
-    width: 100%;
-    height: 50px;
-    border-bottom: 1px solid #F2E3D0;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+    /* Positioning */
     position: -webkit-sticky; // makes the header be always atop no matter if you scroll
     position: sticky;
     top: 0;
     z-index: 1;
+
+    /* Display & Box Model */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+
+    /* Color, Background & Text */
+    background: #221E16; /* BROWN OPTION = #3C2A20 SMOKE BLACK = #0D0A08 */
+    color: white;
+    border-bottom: 1px solid #F2E3D0;
 `
 
 const CoffeeName = style.div`
-    transform: scale(1.5);
-    display: flex;
+    /* Positioning */
     position: absolute;
-    margin-left: 40px;
     left: 10px;
+
+    /* Display */
+    display: flex;
+    transform: scale(1.5);    
+    margin-left: 40px;
 `
 
 const Options = style.div`
-    transform: scale(0.8);
-    display: flex;
+    /* Positioning */
     position: absolute;
     right: -10px;
+
+    /* Display */
+    transform: scale(0.8);
+    display: flex;
 `
 
 const StyledLink = style(Link)`
+    /* Color, Background & Text */
     text-decoration: none;
     color: white;
 
@@ -80,26 +92,28 @@ const StyledLink = style(Link)`
     }
 
     :hover {
-        color: #C9A469; /* liver chestnut = #9E7A4D ;  */
-        cursor: pointer;
-        content: "";
         position: relative;
         // width: 100%;
         // background-color: #C9A469;
+
+        color: #C9A469; /* liver chestnut = #9E7A4D ;  */
+
+        content: "";
+        cursor: pointer;
         transition: .25s linear;
     }
 `
 
 const HomeButton = style.div`
+    display: flex;
     margin-left: 5px;
     margin-right: 5px;
-    display: flex;
 `
 
 const MenuButton = style.div`
+    display: flex;
     margin-left: 5px;
     margin-right: 5px;
-    display: flex;
 
     :hover {
         color: #C9A469; /* liver chestnut = #9E7A4D ;  */
@@ -110,14 +124,16 @@ const MenuButton = style.div`
 `
 
 const ContactButton = style.div`
+    display: flex;
     margin-left: 5px;
     margin-right: 5px;
-    display: flex;
-
+    
     :hover {
-        color: #C9A469; /* liver chestnut = #9E7A4D ;  */
-        cursor: pointer;
         position: relative;
+
+        color: #C9A469; /* liver chestnut = #9E7A4D ;  */
+        
+        cursor: pointer;
         transition: .25s linear;
     }
 `
