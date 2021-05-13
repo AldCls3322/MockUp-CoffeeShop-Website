@@ -1,3 +1,3 @@
 export default {
-    mapKey: ''
+    mapKey: 'ENTER_KEY'
 }
