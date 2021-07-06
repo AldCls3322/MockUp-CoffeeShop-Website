@@ -17,7 +17,7 @@ const Container = style.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 400px;
+    height: 500px;
 
     background: url(${TitleImg}) center center;
     background-size: cover;

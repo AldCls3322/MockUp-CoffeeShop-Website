@@ -73,8 +73,8 @@ const Container = style.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 740px;
+    width: 100%;
+    height: 800px;
     padding: 2%;
     box-sizing: border-box;
 

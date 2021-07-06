@@ -21,7 +21,7 @@ const Container = style.div`
     position: relative;
 
     width: 100%;
-    height: 610px;
+    height: 825px; //610px
     align-items: center;    /* CHECK THIS CAUSE IT MIGHT BE USELESS*/
     justify-content: center;
 

@@ -69,6 +69,8 @@ function MenuDrinks() {
 
 const Container = style.div`
     background: white;
+
+    border-bottom: 1px solid #F2E3D0;
 `
 
 const Title = style.div`

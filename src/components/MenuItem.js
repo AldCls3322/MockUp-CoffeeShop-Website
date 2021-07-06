@@ -82,6 +82,7 @@ const Details = style.div`
 const Tag = style.div`
     position: absolute;
     right: 0;
+    bottom: 50%;
     height: 20px;
     width: 100px;
 
