@@ -52,7 +52,7 @@ const Container = style.div`
     height: 50px;
 
     /* Color, Background & Text */
-    background: #221E16; /* BROWN OPTION = #3C2A20 SMOKE BLACK = #0D0A08 */
+    background: #0F0B06; /* BROWN OPTION = #3C2A20 | SMOKE BLACK = #0D0A08 | BLACK CHOCOLATE = #221E16*/
     color: white;
     border-bottom: 1px solid #F2E3D0;
 `

@@ -82,7 +82,7 @@ const Title = style.div`
     width: 100%;
     height: 100px;
 
-    background-color: black;
+    background-color: #140C00; /* Bistre: 2C1A00 | BROWN BLACK: 140d00 | BROWN BLACKISH: 1a1000  */
     color: white;
     border-bottom: 1px solid #F2E3D0;
     font-size: 1.5rem;
@@ -95,7 +95,7 @@ const Bar = style. div`
     margin-left: 10px;
     margin-right: 10px;
 
-    background: #9E7A4D;
+    background: #9E7A4D; // #9E7A4D
 `
 
 const Contents = style.div`

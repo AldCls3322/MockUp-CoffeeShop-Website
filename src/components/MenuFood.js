@@ -45,7 +45,7 @@ const Title = style.div`
     width: 100%;
     height: 100px;
 
-    background-color: black;
+    background-color: #140C00;
     color: white;
     border-bottom: 1px solid #F2E3D0;
     font-size: 1.5rem;

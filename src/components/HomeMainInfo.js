@@ -49,7 +49,7 @@ const Container = style.div`
     padding: 10px;
     padding-top: 20px;
 
-    background: #0D0A08; /* BROWN OPTION = #3C2A20 */
+    background: #0F0B06; /* BROWN OPTION = #3C2A20 | BLACK = 0D0A08 */
     color: white;
 `
 
